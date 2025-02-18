@@ -1,0 +1,24 @@
+.landing-section {
+    margin: 20px auto;
+    width: fit-content;
+    .landing-video {
+      width: 60%;
+      display: block;
+      margin: 0 auto;
+    }
+    .landing-text {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+      padding-top: 20px;
+    }
+    h2 {
+      color: #4a6d63;
+      font-size: 1.1rem;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+  }

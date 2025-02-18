@@ -1,0 +1,60 @@
+.list-section {
+    width: 90%;
+    margin: 20px auto;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .list-section h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #2e7d32; /* Verde oscuro */
+    margin-bottom: 15px;
+  }
+  
+  .list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .list-shop-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s;
+  }
+  
+  .list-shop-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .list-shop-card h3 {
+    color: #1b5e20;
+    font-size: 22px;
+  }
+  
+  .list-shop-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .list-shop-card li {
+    padding: 5px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .list-shop-card a {
+    color: #2e7d32;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .list-shop-card a:hover {
+    text-decoration: underline;
+  }

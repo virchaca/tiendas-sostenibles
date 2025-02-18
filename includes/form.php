@@ -1,58 +1,31 @@
 
-  
-     <style>  
-     
+<!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
 
-    h3 {
-    margin: auto;
-    text-align: center;
-    }
-    img {
-    margin: 0;        
-    }
-    .div{
-    width: fit-content;
-    margin: auto;
-    text-align: center;
 
-    }
-</style>
 
-<br>
-<div class="div">
+<div class="form-div">
 
-<img style="margin:auto" src="../assets/images/buscar.jpeg" alt="buscar">
-<br> 
-  
-  
-  
-  
-  
-  
-  <div id='filter' class= 'searchDiv'>
+    <div id='filter' class='searchDiv'>
 
-            <h3>Busca tu clínica</h3>
+        <form class="search-form" action="index.php" method='GET'>
+            <!-- cuando llamo a form desde index.php, aqui pongo form action="filters.php", si lo llamo desde la pestaña BUSCAR de header, tengo que salir de includes, porque header está en includes (../filters.php) -->
+            
+            <input type="text" name="search" id="search" placeholder="Busca aquí tu tienda" required>
+            <button type="submit" value="Buscar">Buscar</button>
+        </form>
 
-            <form action="../filters.php" method='GET'>
-                <!-- cuando llamo a form desde index.php, aqui pongo form action="filters.php", si lo llamo desde la pestaña BUSCAR de header, tengo que salir de includes, porque header está en includes (../filters.php) -->
+        <video class="form-video" autoplay loop muted plaisinline>
+            <source src="./assets/images/trolley.mp4" type="video/mp4">Tu navegador no soporta videos
+        </video>
 
-                <input type="text" name="search">         
-
-                <input type="submit" value="Buscar">
-
-            </form> 
-
-             <br><a href="../index.php">Volver a index.php</a>';
-            <hr>
+        <!-- <p><a href="../index.php">Volver a la página de inicio</a></p> -->
     </div>
 
-        
-        
-        <!-- <label for="name">Nombre clínica</label>
+
+
+    <!-- <label for="name">Nombre de la tienda</label>
                 <input type="text" name="name">
 
-                <label for="address">Dirección clínica</label>
+                <label for="address">Dirección tienda</label>
                 <input type="text" name="address">
-
-                <label for="Id_clinic">Id de la clínica</label>
-                <input type="text" name="Id_clinic"> -->
+-->

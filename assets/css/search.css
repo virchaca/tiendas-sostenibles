@@ -1,0 +1,163 @@
+.form-div {
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    /* background-image: url(../images/owl.jpg); */
+    /* background-size: contain;
+    background-position: center 70%;
+    background-repeat: no-repeat; */
+    padding-top: 10px;
+    /* height: 80vh; */
+    width: 80vw;
+    .form-video {
+      padding-top: 10px;
+      width: 40%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  
+  .search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* background: rgba(0, 0, 0, 0.5); */
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); */
+  }
+  
+  .search-form label {
+    font-size: 1.2rem;
+    color: wheat;
+    font-weight: bold;
+  }
+  
+  .search-form input {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid wheat;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .search-form input:focus {
+    border-color: gold;
+    box-shadow: 0px 0px 8px gold;
+  }
+  
+  .search-form button {
+    background: #2e7d32;
+    background: #2c3e50;
+    color: #148f77;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    /* border: none; */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    align-self: flex-end;
+  }
+  
+  .search-form button:hover {
+    background: #2c3e49;
+    color: white;
+    color: #148f77;
+
+  }
+  
+  /* filter.php = RESULTADOS BÚSQUEDA */
+  .filter-div {
+    width: 100%;
+  
+    h3 {
+      margin: auto;
+      text-align: center;
+      color: #2c3e50;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      padding-left: 3px;
+      width: 80%;
+    }
+  
+    p {
+      text-align: center;
+    }
+  
+    button {
+      background: #2c3e50;
+      color: white;
+      font-size: 1rem;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      align-self: flex-end;
+      a {
+        color: white;
+      }
+    }
+  
+    button:hover {
+      background: #2e7d32;
+    }
+  }
+  
+  .search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .shop-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .shop-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .shop-card h2 {
+    color: #2c3e50;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    padding-left: 4px;
+    border-left: 5px solid #2e7d32;
+    border-radius: 5px;
+  }
+  
+  .shop-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .shop-card li {
+    margin: 5px 0;
+    padding: 3px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .shop-card a {
+    color: #2e7d32;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .shop-card a:hover {
+    text-decoration: underline;
+  }

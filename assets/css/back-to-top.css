@@ -1,0 +1,27 @@
+.back-to-top {
+    position: fixed;
+    bottom: 50px; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde la derecha */
+    background-color: #4a6d63; /* Color acorde a tu web */
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Hace el botón redondo */
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .back-to-top:hover {
+    background-color: #3b5c54;
+    transform: scale(1.1);
+  }
+  
+  .back-to-top:active {
+    transform: scale(1);
+  }

@@ -1,6 +1,6 @@
 <?php
 
-echo 'Hola nueva clinica <br>';
+echo 'Hola nueva tienda <br>';
 
 session_start(); // para iniciar una sesión y luego almacenar el mensaje de éxito o error en una variable de sesión y poder mostra esa variable/mensaje en la pagina elformulario, en este caso index.php (pero la llamo en el fomrulario)
 
@@ -11,12 +11,12 @@ require_once 'includes/connection.php';
 if(isset($_POST)){
 
     //recoger datos del formulario
-    $name = isset($_POST['Name']) ? $_POST['Name'] : false;
-    $address = isset($_POST['Address']) ? $_POST['Address'] : false;
-    $city = isset($_POST['City']) ? $_POST['City'] : false;
-    $phone = isset($_POST['Phone']) ? $_POST['Phone'] : false;
-    $lat = isset($_POST['Lat']) ? $_POST['Lat'] : false;
-    $lng = isset($_POST['Lng']) ? $_POST['Lng'] : false;
+    $name = isset($_POST['name']) ? $_POST['name'] : false;
+    $address = isset($_POST['address']) ? $_POST['address'] : false;
+    $city = isset($_POST['city']) ? $_POST['city'] : false;
+    $phone = isset($_POST['phone']) ? $_POST['phone'] : false;
+    // $lat = isset($_POST['Lat']) ? $_POST['Lat'] : false;
+    // $lng = isset($_POST['Lng']) ? $_POST['Lng'] : false;
 
     var_dump($_POST);
     echo '<br>';
@@ -45,11 +45,12 @@ if(isset($_POST)){
     //     $errors['city'] = 'la ciudad está vacía <br>';
     // }
 
-    $variables = ['name', 'address', 'city', 'phone', 'lat', 'lng'];
+    $variables = ['name', 'address', 'city', 'phone'];
+    // $variables = ['name', 'address', 'city', 'phone', 'lat', 'lng'];
 
     foreach ($variables as $variable) {
         if (empty($$variable)) {
-            $errors['variable_empty'] = "el campo \"$variable\" está vacío <br>";
+            $errors[$variable] = "el campo \"$variable\" está vacío <br>";
         }
     }
 
@@ -71,9 +72,9 @@ if(isset($_POST)){
 
     if(empty($errors)) {
         // preparar la consulta SQL para evitar la inyección SQL
-        $sql = "INSERT INTO Clinics (name, address, city, phone, lat, lng) VALUES ('$name', '$address', '$city', '$phone', '$lat', '$lng')";
-        $newClinic = mysqli_query($conn, $sql);
-        if ($newClinic) {
+        $sql = "INSERT INTO Shops (name, address, city, phone) VALUES ('$name', '$address', '$city', '$phone')";
+        $newShop = mysqli_query($conn, $sql);
+        if ($newShop) {
             $_SESSION['message'] = "Registro insertado correctamente";
             //Creo una variable session para recoger el mensaje y mostrarlo luego            
         } else {
@@ -102,7 +103,6 @@ if(isset($_POST)){
     //     echo "Error al insertar el registro: " . mysqli_error($conn);
     //     echo '<br><a href="index.php">Volver a index.php</a>';
     // }
-
     
 }
 

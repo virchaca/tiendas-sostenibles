@@ -1,0 +1,1 @@
+<p class="contact-form-reply">Gracias, su mensaje se ha enviado correctamente. Nos pondremos en contaco con usted a la mayor brevedad posible</p>
