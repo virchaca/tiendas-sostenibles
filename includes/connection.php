@@ -1,12 +1,33 @@
 <?php
+//ARCHIVO PARA CONFIGURAR LA CONEXION A LA BASE DE DATOS
 
+
+require 'vendor/autoload.php';
 //conexion
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
 
+// Depuración: Verificar que el archivo .env se haya cargado correctamente
+// if (!file_exists(__DIR__ . '/../.env')) {
+//     die('Error: El archivo .env no existe en la ruta especificada');
+// }
 
-$servername = "localhost"; //nos conectamos mediante el puerto 3307, con MariaDB=mysql, root sin pasword
+// Verificar que la variable de entorno se haya cargado correctamente
+// if (getenv('DB_PASSWORD') === false) {
+//     die('Error: No se pudo cargar la variable de entorno DB_PASSWORD');
+// }
+
+$servername = "localhost"; 
 $username = "root";
-$password = "Mybootcamp@23"; //no tiene password porque se esta conectando DESDE XAMPP
+$password = getenv('DB_PASSWORD');  
 $database = "greenshops_db";
+
+// // Depuración: Verificar que la variable de entorno se haya cargado correctamente
+// if ($password === false) {
+//     die('Error: No se pudo obtener la variable de entorno DB_PASSWORD');
+// } else {
+//     echo 'DB_PASSWORD: ' . $password . '<br>';
+// }
 
 // Crea la conexión
 $conn = new mysqli($servername, $username, $password, $database); //mysqli es la manera de hacer la conexion en php

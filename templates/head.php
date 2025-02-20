@@ -25,17 +25,12 @@
     rel="stylesheet" />
     
     <!-- cosas map.html -->
-    <!-- del video https://www.youtube.com/watch?v=yiqV9tDdCVc para MAPBOX, GEOCODER y JQUERY-->
-
     <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
         crossorigin="anonymous">
     </script>
-    
-    <!-- <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
-    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>  -->
 
+    <script src="assets/js/mapfunctions.js"></script>
 
     <!-- cosas map.html fin -->

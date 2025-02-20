@@ -24,13 +24,11 @@ if (isset($_GET['search'])) {
     <main id="main">
 
         <?php
-
         $file = "includes/$page.php";
         if (file_exists($file)) {
             require_once $file;
         } else {
             echo "<p class='no-page'>No se ha encontrado la página</p>";
-            // require "includes/mapIndex.php";
         }
         ?>
 

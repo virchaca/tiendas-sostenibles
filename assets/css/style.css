@@ -6,16 +6,17 @@ gris azulado pin: #3a5169 */
 azulon: #2c3e50
 verde: #2E7D32 
 color boton top: #4A6D63*/
-@import url("back-to-top.css");
-@import url("contact.css");
-@import url("footer.css");
-@import url("insert-form.css");
-@import url("landing.css");
-@import url("list-shops.css");
+@import url("./components/back-to-top.css");
+@import url("./partials/contact.css");
+@import url("./partials/footer.css");
+@import url("./partials/insert-form.css");
+@import url("./partials/landing.css");
+@import url("./partials/list-shops.css");
 @import url("mapbox.css");
-@import url("navbar.css");
-@import url("privacy-policy.css");
-@import url("search.css");
+@import url("./partials/navbar.css");
+@import url("./partials/new-shop.css");
+@import url("./partials/privacy-policy.css");
+@import url("./partials/search.css");
 @import url("variables.css");
 
 @font-face {

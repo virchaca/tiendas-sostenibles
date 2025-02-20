@@ -4,9 +4,6 @@ session_start(); //inicio la sesion para traer la variable del mensaje
 require 'connection.php';
 ?>
 
-<link rel="stylesheet" href="../assets/css/style.css">
-
-
 <div id='insertDiv'>
     <h3>Registra una nueva tienda</h3>
 
@@ -27,7 +24,7 @@ require 'connection.php';
     ?>
 
 
-    <form class='insertForm' action="../insertedData.php" method='POST'>
+    <form class='insertForm' action="insertedData.php" method='POST'>
 
         <label for="name">Nombre tienda:
             <input type="text" name="name"> </label>

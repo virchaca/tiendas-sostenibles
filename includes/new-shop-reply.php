@@ -1,0 +1,2 @@
+
+<p class="contact-form-reply">Hemos recibido su mensaje, revisarermos los datos de la tienda <strong id="new-shop-name"></strong> para incluirla en nuestro mapa y base de datos, en caso de alguna duda nos pondremos en contacto mediante el email <strong id=new-shop-email></strong>. Muchas gracias</p>

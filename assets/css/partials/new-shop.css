@@ -1,0 +1,84 @@
+/* NUEVA TIENDA */
+
+#newShopDiv {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#newShopDiv h3 {
+  text-align: center;
+  color: #2a7c6f;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Mensajes de error y éxito */
+#newShopDiv p {
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+#newShopDiv p:first-child {
+  background: #e0f7e9;
+  color: #2a7c6f;
+  border: 1px solid #2a7c6f;
+}
+
+ 
+  .new-shop-form label {
+    font-weight: bold;
+    color: #3b5c54;
+  }
+  
+  .new-shop-input {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #7a9e92;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .new-shop-input:focus {
+    border-color: #2f4c44;
+    outline: none;
+  }
+ 
+  
+  .new-shop-btnSubmit {
+    background: #3b5c54;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .new-shop-btnSubmit:hover {
+    background: #2f4c44;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+       
+    .new-shop-form {
+      max-width: 100%;
+    }
+  }
+  
+  .new-shop-form-reply{
+    color: #3b5c54;
+    font-size: 1rem;
+    margin: 2rem;
+    text-align: center;
+  }
+  
