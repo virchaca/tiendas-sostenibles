@@ -19,7 +19,7 @@ $dotenv->load();
 
 $servername = "localhost"; 
 $username = "root";
-$password = getenv('DB_PASSWORD');  
+getenv('DB_PASSWORD');
 $database = "greenshops_db";
 
 // // Depuración: Verificar que la variable de entorno se haya cargado correctamente

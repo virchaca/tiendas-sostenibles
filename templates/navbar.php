@@ -1,5 +1,5 @@
 <!-- < ?php
-    $base_url = "/mapview"; // Cambia según tu estructura
+    $base_url = "/tiendas-sostenibles"; // Cambia según tu estructura
 ?> -->
 
     <p class="navbar-pre-title"> Abriendo una puerta...</p>

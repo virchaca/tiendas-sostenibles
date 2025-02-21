@@ -51,7 +51,7 @@
             <input
                 type="hidden"
                 name="_next"
-                value="http://localhost/mapview/index.php?page=contact-reply" />
+                value="http://localhost/tiendas-sostenibles/index.php?page=contact-reply" />
             <input type="hidden" name="_captcha" value="false" />
         </form>
     </div>

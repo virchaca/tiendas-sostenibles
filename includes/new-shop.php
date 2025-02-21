@@ -86,7 +86,7 @@
         <input
             type="hidden"
             name="_next"
-            value="http://localhost/mapview/index.php?page=new-shop-reply" />
+            value="http://localhost/tiendas-sostenibles/index.php?page=new-shop-reply" />
         
         <input type="hidden" name="_captcha" value="false" />  
         
