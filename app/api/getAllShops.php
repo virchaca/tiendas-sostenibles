@@ -3,8 +3,8 @@
 //creamos estructura GEOJSON: convertir BD a la estructura necesaria formando la API
 
 //include('connection.php'); lo necesitaríamos para PDO
+//require_once '../includes/connection.php'; 
 
-require_once '../includes/connection.php'; 
 header('Content-Type: application/json; charset=utf-8');
 
 $data = mysqli_query($conn, "SELECT * FROM shops");  

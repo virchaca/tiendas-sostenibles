@@ -20,4 +20,4 @@ tmp/
 
 # Ignorar archivos de configuración de IDEs
 .vscode/
-.idea/
+.idea/git rm --cached app/templates/.gitignore

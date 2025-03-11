@@ -14,9 +14,8 @@
             <li> <a href="?page=map-shops">Mapa</a></li>
             <li> <a href="?page=form">Buscar</a></li>
             <li> <a href="?page=list-shops">Listado tiendas</a></li>
-            <li> <a href="?page=insertForm">Registro</a></li>
-            <li> <a href="?page=new-shop">Registro Mail</a></li>
-            <!-- <li> <a href="map.php">Mapa desde Fuera</a></li> -->
+            <li> <a href="?page=new-shop">Registro</a></li>
+            <!-- <li> <a href="?page=insertForm">Registro directo a BD</a></li> -->
         </ul>
     </nav>
     <hr>

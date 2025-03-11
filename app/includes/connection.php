@@ -33,7 +33,7 @@ if ($password === false) {
 
 
 // Creo la conexión
-$conn = new mysqli($servername, $username, $password, $database); //mysqli es la manera de hacer la conexion en php
+$conn = new mysqli($servername, $username, $passwordd, $database); //mysqli es la manera de hacer la conexion en php
 //$conn = mysqli_connect ($servername, $username, $password, $database); -> otra forma
 
 // Verifica la conexión

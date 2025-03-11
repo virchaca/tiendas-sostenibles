@@ -1,7 +1,9 @@
 
-<?php require_once __DIR__ . '/../app/includes/connection.php'; ?>
 
 <?php
+//si nos conectáramos a la BD sería aquí
+// require_once __DIR__ . '/../app/includes/connection.php';
+
 // Definir qué página cargar (por defecto, el mapa)
 if (isset($_GET['search'])) {
     $page = 'filters';
