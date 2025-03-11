@@ -1,4 +1,6 @@
-<?php require 'includes/connection.php'; ?>
+
+<?php require_once __DIR__ . '/../app/includes/connection.php'; ?>
+
 <?php
 // Definir qué página cargar (por defecto, el mapa)
 if (isset($_GET['search'])) {
@@ -13,18 +15,18 @@ if (isset($_GET['search'])) {
 <html lang="en">
 
 <head>
-    <?php include 'templates/head.php'; ?>
+    <?php include '../app/templates/head.php'; ?>
 </head>
 
 <body>
     <header id='header'>
-        <?php include 'templates/navbar.php'; ?>
+        <?php include '../app/templates/navbar.php'; ?>
     </header>
 
     <main id="main">
 
         <?php
-        $file = "includes/$page.php";
+        $file = "../app/includes/$page.php";
         if (file_exists($file)) {
             require_once $file;
         } else {
@@ -34,7 +36,8 @@ if (isset($_GET['search'])) {
 
     </main>
 
-    <?php require_once 'templates/footer.php'; ?>
+    <?php require_once '../app/templates/footer.php'; ?>
+
 
     <script src="./assets/js/main.js"></script>
 

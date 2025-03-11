@@ -3,7 +3,8 @@
 // COGEMOS LOS DATOS DE UN JSON SIMULANDO QUE VIENEN DE BASE DE DATOS. 
 // MÁS ABAJO EL CÓDIGO PARA TRAER DATOS DE BASE DE DATOS CON MYSQLI
 
-$jsonData = file_get_contents('BD/data/shopsJson.json');
+$jsonData = file_get_contents(__DIR__ . '/../BD/data/shopsJson.json');
+;
 $shops = json_decode($jsonData, true); // Convertir JSON a array asociativo
 
 echo "<section class='list-section'>";
@@ -77,6 +78,6 @@ echo "</section>";
 
 //$conn->close(); // Cierra la conexión
 
-@include 'components/back-to-top.php';
+include 'components/back-to-top.php'; 
 ?>
 

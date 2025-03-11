@@ -5,7 +5,7 @@ echo 'Hola nueva tienda <br>';
 session_start(); // para iniciar una sesión y luego almacenar el mensaje de éxito o error en una variable de sesión y poder mostra esa variable/mensaje en la pagina elformulario, en este caso index.php (pero la llamo en el fomrulario)
 
 //conexion
-require_once 'includes/connection.php';
+require_once 'connection.php';
 
 //comprobar datos que vienen por POST
 if(isset($_POST)){
@@ -80,16 +80,16 @@ if(isset($_POST)){
         } else {
             $_SESSION['message'] = "Error al insertar el registro: " . mysqli_error($conn);
         }
-        header('location: index.php'); // Redirigir de vuelta al formulario
+        header('location: ../../public/index.php'); // Redirigir de vuelta al formulario
         exit(); // Terminar la ejecución del script
     } else {
         $_SESSION['errors'] = $errors;        
-        header('location: index.php'); // Redirigir de vuelta al formulario
+        header('location: ../../public/index.php'); // Redirigir de vuelta al formulario
         exit(); // Terminar la ejecución del script
     }
 
 
-    // Así lo tewnía antes, y mostraba los errores o el exito en la pagina insertedData.php, ahora me lo muestra en el mismo index.php, ya que he iniciado sesión y creado una variable de sesion que recoge los mensajes de éxito/error
+    // Así lo tenía antes, y mostraba los errores o el exito en la pagina insertedData.php, ahora me lo muestra en el mismo index.php, ya que he iniciado sesión y creado una variable de sesion que recoge los mensajes de éxito/error
     // if(empty($errors)) {
     //     // preparar la consulta SQL para evitar la inyección SQL
     //     $sql = "INSERT INTO Clinics (name, address) VALUES ('$name', '$address')";
@@ -97,7 +97,7 @@ if(isset($_POST)){
     //     echo "Registro insertado correctamente";
     //     // Mostrar botón para volver a index.php
     //     echo '<br><a href="index.php">Volver a index.php</a>';
-    //     //header('location: index.php'); //esto te redirige a la pagina que quieras
+    //     //header('location: ../../public/index.php'); //esto te redirige a la pagina que quieras
     //     exit(); // Terminar la ejecución del script
     // }else{
     //     echo "Error al insertar el registro: " . mysqli_error($conn);

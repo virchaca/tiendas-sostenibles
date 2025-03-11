@@ -4,6 +4,9 @@
         <div id="map"></div>
     </div>
 
+
+    <script src="assets/js/mapfunctions.js"></script>
+
     <!-- ***************  SCRIPT MAPBOX  para cargar Mapbox y las tiendas    ****************** -->
     <script>
 

@@ -31,6 +31,6 @@
         crossorigin="anonymous">
     </script>
 
-    <script src="assets/js/mapfunctions.js"></script>
+    <!-- <script src="assets/js/mapfunctions.js"></script> -->
 
     <!-- cosas map.html fin -->

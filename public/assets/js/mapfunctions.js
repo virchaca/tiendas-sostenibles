@@ -22,7 +22,7 @@ function initMap() {
 // Función para cargar los datos de las tiendas desde la API y agregarlos al mapa
 
 function loadShops(map) {
-    fetch("api/getShopsJson.php") // Traer datos de API del JSON
+    fetch("../app/api/getShopsJson.php") // Traer datos de API del JSON
     // fetch("api/getAllShops.php")   // Así traemos datos de API de la BD
         .then((response) => response.json())
         .then((data) => {

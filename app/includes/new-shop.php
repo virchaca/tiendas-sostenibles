@@ -13,27 +13,24 @@
                 type="text" 
                 name="name"
                 id="shop-name"
-                class="new-shop-input"> 
+                class="new-shop-input"
+                required> 
         </label>
 
         <label for="address">Direccion (calle, codgo postal, ciudad y provincia)
             <input 
                 type="text" 
                 name="address"
-                class="new-shop-input"> 
-        </label>
- 
-        <!-- <label for="lat">Latitud (coordenada)
-            <input type="text" name="lat" pattern="^-?\d{1,3}(?:\.\d+)?$" title="Por favor, ingrese una latitud válida" required> </label>
-
-        <label for="lng">Longitud (coordenada)
-            <input type="text" name="lng" pattern="^-?\d{1,3}(?:\.\d+)?$" title="Por favor, ingrese una longitud válida" required> </label>  -->
+                class="new-shop-input"
+                required> 
+        </label>     
 
         <label for="web">Página Web de la tienda
             <input 
                 type="text" 
                 name="web"
-                class="new-shop-input"> 
+                class="new-shop-input"
+                required> 
         </label>
 
         <label for="email">Email de contacto
@@ -41,7 +38,8 @@
                 type="email" 
                 name="email"
                 id="shop-email"
-                class="new-shop-input"> 
+                class="new-shop-input"
+                required> 
         </label>
 
         <label for="phone">Telefono
@@ -49,7 +47,8 @@
                 type="number" 
                 name="phone"
                 id="shop-phone"
-                class="new-shop-input"> 
+                class="new-shop-input"
+                required> 
         </label>
 
         <label for="description">Descripción de actividad la tienda
@@ -86,7 +85,7 @@
         <input
             type="hidden"
             name="_next"
-            value="http://localhost/tiendas-sostenibles/index.php?page=new-shop-reply" />
+            value="http://localhost/tiendas-sostenibles/public/index.php?page=new-shop-reply" />
         
         <input type="hidden" name="_captcha" value="false" />  
         

@@ -6,33 +6,43 @@
 
 
   // HACER BÚSQQUEDA EN JSON
-  
-  $jsonData = file_get_contents('./BD/data/shopsJson.json');
+
+  $jsonData = file_get_contents(__DIR__ . '/../BD/data/shopsJson.json');
+
   $shops = json_decode($jsonData, true);
+
+
+  // Función para eliminar tildes usando transliterator
+  function remove_accents($string)
+  {
+    $transliterator = transliterator_create('Any-Latin; Latin-ASCII');
+    return transliterator_transliterate($transliterator, $string);
+  }
 
   // Verificar si se ha enviado un término de búsqueda
 
-    if(isset($_GET['search']) && !empty($_GET['search'])){
-      $searchInput = strtolower($_GET['search']);
+  if (isset($_GET['search']) && !empty($_GET['search'])) {
+    // $searchInput = strtolower($_GET['search']);
+    $searchInput = strtolower(remove_accents($_GET['search'])); // Convertir a minúsculas y quitar tildes
 
-      //filtrar
-      $filteredShops = array_filter($shops, function($shop) use($searchInput){
-        return  stripos($shop['name'], $searchInput) !== false || 
-                stripos($shop['address'], $searchInput) !== false || 
-                stripos($shop['city'], $searchInput) !== false || 
-                stripos($shop['state'], $searchInput) !== false || 
-                stripos($shop['category'], $searchInput) !== false || 
-                stripos($shop['description'], $searchInput) !== false;        
-        });
+    //filtrar
+    $filteredShops = array_filter($shops, function ($shop) use ($searchInput) {
+      return  stripos(remove_accents(strtolower($shop['name'])), $searchInput) !== false ||
+              stripos(remove_accents(strtolower($shop['address'])), $searchInput) !== false ||
+              stripos(remove_accents(strtolower($shop['city'])), $searchInput) !== false ||
+              stripos(remove_accents(strtolower($shop['state'])), $searchInput) !== false ||
+              stripos(remove_accents(strtolower($shop['category'])), $searchInput) !== false ||
+              stripos(remove_accents(strtolower($shop['description'])), $searchInput) !== false;
+    });
 
-      $numShops = count($filteredShops);
-      
-      if($numShops > 0){
-        echo "<div class='search-results'>";
-        echo "<h3>Número de tiendas encontradas:  $numShops </h3>";
+    $numShops = count($filteredShops);
 
-        foreach($filteredShops as $shop){
-          echo "<div class='shop-card'>
+    if ($numShops > 0) {
+      echo "<div class='search-results'>";
+      echo "<h3>Número de tiendas encontradas:  $numShops </h3>";
+
+      foreach ($filteredShops as $shop) {
+        echo "<div class='shop-card'>
           <h2>{$shop["name"]}</h2> 
           <ul>
               <li><strong>Dirección:</strong> {$shop["address"]}, {$shop["city"]} ({$shop["state"]})</li>
@@ -43,20 +53,20 @@
               <li><strong>Categoría:</strong> {$shop["category"]} </li>
           </ul><hr>
         </div>";
-        }
-
-        echo "</div>";
-      }else{
-        echo "<h3>No hemos encontrado ninguna tienda con tu búsqueda, vuelve a intentarlo o visita el mapa para ver todas las tiendas</h3>";
       }
+
+      echo "</div>";
+    } else {
+      echo "<h3>No hemos encontrado ninguna tienda con tu búsqueda, vuelve a intentarlo o visita el mapa para ver todas las tiendas</h3>";
     }
-    
-    echo '<p><button><a href="index.php?page=form">Nueva búsqueda</a></button></p>';
-    
-  
+  }
+
+  echo '<p><button><a href="index.php?page=form">Nueva búsqueda</a></button></p>';
+
+
 
   // *****************HACER BÚSQUEDA EN BASE DE DATOS *******************
-    
+
   // require_once 'connection.php';
 
   // if (isset($_GET['search'])) {

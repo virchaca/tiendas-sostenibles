@@ -4,7 +4,7 @@
 
     <div class="footer-container">
         <nav class="footer-section">
-            <a href="index.php?page=privacyPolicy">Política de Privacidad</a> |
+            <a href="index.php?page=privacy-policy">Política de Privacidad</a> |
             <a href="index.php?page=contact">Contacto</a>
         </nav>
 

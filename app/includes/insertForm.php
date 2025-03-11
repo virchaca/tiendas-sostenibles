@@ -24,7 +24,7 @@ require 'connection.php';
     ?>
 
 
-    <form class='insertForm' action="insertedData.php" method='POST'>
+    <form class='insertForm' action="../app/includes/insertedData.php" method='POST'>
 
         <label for="name">Nombre tienda:
             <input type="text" name="name"> </label>
